@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsvcyfbtmab6y"]
+
+[ext_resource type="PackedScene" uid="uid://ceoljh75q26fg" path="res://Hud.tscn" id="1_cdh2n"]
+[ext_resource type="Script" path="res://Main.gd" id="1_lrpoo"]
+[ext_resource type="PackedScene" uid="uid://ckep8norsymnx" path="res://GameGrid.tscn" id="2_kj0ul"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_lrpoo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 648.0
+offset_bottom = 648.0
+color = Color(0, 0.827766, 0.827766, 1)
+
+[node name="Hud" parent="." instance=ExtResource("1_cdh2n")]
+
+[node name="GameGrid" parent="." instance=ExtResource("2_kj0ul")]
+visible = false
+
+[connection signal="start_game_signal" from="Hud" to="." method="_on_hud_start_game_signal"]
+[connection signal="continue_next_turn" from="GameGrid" to="." method="_on_game_grid_continue_next_turn"]
+[connection signal="game_over" from="GameGrid" to="." method="_on_game_grid_game_over"]

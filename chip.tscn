@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmi4xj2cx2408"]
+
+[ext_resource type="Script" path="res://chip.gd" id="1_25ofd"]
+[ext_resource type="Texture2D" uid="uid://bpjk3if6xnitv" path="res://assets/Chip.png" id="1_lm1ry"]
+
+[node name="Chip" type="Sprite2D"]
+visible = false
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_lm1ry")
+script = ExtResource("1_25ofd")

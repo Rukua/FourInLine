@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsvcyfbtmab6y"]
+
+[ext_resource type="PackedScene" uid="uid://ceoljh75q26fg" path="res://Hud.tscn" id="1_cdh2n"]
+[ext_resource type="Script" path="res://Main.gd" id="1_lrpoo"]
+[ext_resource type="PackedScene" uid="uid://ckep8norsymnx" path="res://GameGrid.tscn" id="2_kj0ul"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_lrpoo")
+
+[node name="Node2D" parent="." instance=ExtResource("1_cdh2n")]
+
+[node name="Node2D2" parent="." instance=ExtResource("2_kj0ul")]
+visible = false
